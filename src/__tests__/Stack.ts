@@ -3,7 +3,7 @@ import Stack from "@code/Stack";
 test("stack", function () {
     const list = new Stack<number>();
 
-    list.push(5);
+    list.push(5); [5,7]
     list.push(7);
     list.push(9);
 
@@ -22,6 +22,12 @@ test("stack", function () {
     list.push(69);
     expect(list.peek()).toEqual(69);
     expect(list.length).toEqual(1);
+
+    list.pop()
+    list.pop()
+    list.pop()
+    list.pop()
+    expect(list.length).toEqual(0);
 
     //yayaya
 });
